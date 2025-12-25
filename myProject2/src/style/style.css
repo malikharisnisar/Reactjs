@@ -1,0 +1,64 @@
+
+div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: #111;
+}
+
+#bulboff,
+#bulbon {
+  width: 220px;
+  transition: opacity 0.4s ease-in-out;
+}
+#bulboff {
+  opacity: 0.6;
+}
+#bulbon {
+  animation: turnOn 0.8s ease-in-out forwards,
+             flicker 1.5s ease-in-out 0.8s;
+  filter: drop-shadow(0 0 20px #ffd700)
+          drop-shadow(0 0 40px #ffea70)
+          drop-shadow(0 0 60px #fff2a8);
+}
+
+@keyframes turnOn {
+  0% {
+    opacity: 0.2;
+    filter: drop-shadow(0 0 0px #000);
+  }
+  50% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 15px #ffdd55);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Slight realistic flicker */
+@keyframes flicker {
+  0% { opacity: 1; }
+  20% { opacity: 0.85; }
+  40% { opacity: 1; }
+  60% { opacity: 0.9; }
+  80% { opacity: 1; }
+}
+button {
+  padding: 10px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #ffd700;
+  color: #111;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
