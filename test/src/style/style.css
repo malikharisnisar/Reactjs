@@ -1,0 +1,165 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page */
+body {
+  background: linear-gradient(135deg, #141e30, #243b55);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* App container */
+div {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+/* Search input */
+input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+/* Movie list */
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Movie card */
+li {
+  background: #1f2937;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Movie title */
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+/* Year */
+p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+/* Poster */
+img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Not found message */
+p:last-child {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  color: #ff6b6b;
+}
+/* ========================= */
+/* Media Queries */
+/* ========================= */
+
+/* 1. min-width: 767px */
+@media (min-width: 767px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  ul {
+    gap: 24px;
+  }
+
+  img {
+    height: 340px;
+  }
+}
+
+/* 2. min-width: 768px & max-width: 1023px (Tablet) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  div {
+    max-width: 720px;
+  }
+
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  img {
+    height: 360px;
+  }
+}
+
+/* 3. min-width: 1024px & max-width: 1439px (Laptop / Desktop) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  div {
+    max-width: 1000px;
+  }
+
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  img {
+    height: 380px;
+  }
+}
+
+/* 4. min-width: 1440px (Large screens) */
+@media (min-width: 1440px) {
+  div {
+    max-width: 1200px;
+  }
+
+  ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  img {
+    height: 400px;
+  }
+}
